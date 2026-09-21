@@ -13,6 +13,7 @@ public class Vehicle
     public double Price { get; set; }
     public bool IsSold { get; set; }
     public List<string> Equipments { get; set; } = [];
+    public required Engine Engine { get; set; }
 
     public void AddVehicle() { }
     public void UpdateVehicle() { }
