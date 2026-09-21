@@ -1,6 +1,6 @@
 ﻿namespace WestcoastCars;
 
-public class Vehicle
+public abstract class Vehicle
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();
     public string RegistrationNumber { get; set; } = "";
@@ -15,7 +15,7 @@ public class Vehicle
     public List<string> Equipments { get; set; } = [];
     public required Engine Engine { get; set; }
 
-    public void AddVehicle() { }
-    public void UpdateVehicle() { }
-    public void RemoveVehicle() { }
+    public virtual void AddVehicle() { }
+    public virtual void UpdateVehicle() { }
+    public virtual void RemoveVehicle() { }
 }
