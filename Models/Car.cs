@@ -1,8 +1,10 @@
-﻿namespace WestcoastCars.Models;
+﻿using WestcoastCars.Enums;
+
+namespace WestcoastCars.Models;
 
 public class Car : Vehicle
 {
-    public string TransmissionType { get; set; } = "";
+    public TransmissionTypeEnum TransmissionType { get; set; }
 
     public override string ToString()
     {

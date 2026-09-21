@@ -1,4 +1,5 @@
-﻿using WestcoastCars.Models;
+﻿using WestcoastCars.Enums;
+using WestcoastCars.Models;
 
 namespace WestcoastCars;
 
@@ -8,7 +9,7 @@ class Program
     {
         Car car = new()
         {
-            Engine = new Engine() { EngineEffect = 1700, EngineVolume = 3.0, FuelType = "Bensin", HorsePower = 250 },
+            Engine = new Engine() { EngineEffect = 1700, EngineVolume = 3.0, FuelType = FuelTypeEnum.Bensin, HorsePower = 250 },
             Manufacturer = new Manufacturer() { Name = "Volvo" },
             Model = new VehicleModel() { Name = "XC60" },
             Mileage = 155000,
@@ -18,7 +19,7 @@ class Program
             Equipments = ["Navigator", "Business paket"],
             Price = 235500,
             RegistrationNumber = "ABC123",
-            TransmissionType = "Automat",
+            TransmissionType = TransmissionTypeEnum.Automat,
         };
 
         Console.WriteLine(car);
@@ -28,7 +29,7 @@ class Program
             Manufacturer = new() { Name = "Kawasaki" },
             Model = new() { Name = "Z900" },
             BikeType = "SuperNaked",
-            Engine = new() { EngineEffect = 70, EngineVolume = 948, FuelType = "Bensin", HorsePower = 0 },
+            Engine = new() { EngineEffect = 70, EngineVolume = 948, FuelType = FuelTypeEnum.Bensin, HorsePower = 0 },
             Mileage = 100,
             ModelYear = 2027,
             Color = "Green and silver",
@@ -42,7 +43,7 @@ class Program
         {
             Manufacturer = new() { Name = "Fiat" },
             Model = new() { Name = "Ducato 2.3" },
-            Engine = new() { EngineEffect = 96, EngineVolume = 2287, FuelType = "Diesel", HorsePower = 130 },
+            Engine = new() { EngineEffect = 96, EngineVolume = 2287, FuelType = FuelTypeEnum.Diesel, HorsePower = 130 },
             Mileage = 330000,
             ModelYear = 2017,
             Color = "Vit",
@@ -52,7 +53,7 @@ class Program
             RegistrationNumber = "HKJ001",
             TailLift = true,
             MaxLoad = 3500,
-            TransmissionType = "Automat"
+            TransmissionType = TransmissionTypeEnum.Automat
         };
 
         Console.WriteLine(truck);
