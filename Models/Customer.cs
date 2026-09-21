@@ -1,4 +1,4 @@
-﻿namespace WestcoastCars;
+﻿namespace WestcoastCars.Models;
 
 public abstract class Customer
 {

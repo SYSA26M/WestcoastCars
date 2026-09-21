@@ -1,7 +1,11 @@
-﻿namespace WestcoastCars;
+﻿namespace WestcoastCars.Models;
 
 public class Car : Vehicle
 {
-    public string GearType { get; set; } = "";
     public string TransmissionType { get; set; } = "";
+
+    public override string ToString()
+    {
+        return $"{base.ToString()} Växellåda: {TransmissionType}";
+    }
 }
