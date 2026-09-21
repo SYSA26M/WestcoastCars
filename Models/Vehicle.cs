@@ -12,15 +12,6 @@ public class Vehicle
     public string Description { get; set; } = "";
     public double Price { get; set; }
     public bool IsSold { get; set; }
-    public string GearType { get; set; } = "";
-    public string TransmissionType { get; set; } = "";
-    public int HorsePower { get; set; }
-    public int EngineEffect { get; set; }
-    public double EngineVolume { get; set; }
-    public string BikeType { get; set; } = "";
-    public bool TailLift { get; set; }
-    public int MaxLoad { get; set; }
-    public int Tara { get; set; }
     public List<string> Equipments { get; set; } = [];
 
     public void AddVehicle() { }
