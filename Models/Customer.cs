@@ -8,4 +8,9 @@ public abstract class Customer
     public virtual void AddCustomer() { }
     public virtual void UpdateCustomer() { }
     public virtual void RemoveCustomer() { }
+
+    public override string ToString()
+    {
+        return $"E-Post: {Email} Telefon: {Phone}";
+    }
 }

@@ -62,14 +62,58 @@ class Program
         List<Vehicle> vehicles = [car, truck, bike];
 
         Console.WriteLine("");
-        Console.WriteLine("--------------------------------------------------------------------------");
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("foreach loopen");
-        Console.ResetColor();
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.Blue;
 
+        Console.ForegroundColor = ConsoleColor.Green;
         foreach (Vehicle vehicle in vehicles)
         {
             Console.WriteLine(vehicle);
         }
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.WriteLine("");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.ResetColor();
+
+        Private person = new("Eva", "Olsson")
+        {
+            Address = new()
+            {
+                AddressLine = "Västergårdsvägen 1",
+                PostalCode = "123 45",
+                City = "Storstaden",
+                AddressType = AddressTypeEnum.Hem
+            }
+        };
+
+
+        Console.WriteLine("Privatkund");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine(person);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.WriteLine("");
+        Console.ResetColor();
+
+        Company company = new("Bluff & Båg AB", "551245-8976");
+
+        company.Addresses.Add(new Address() { AddressLine = "Gatan 2", PostalCode = "456 78", City = "Staden", AddressType = AddressTypeEnum.Faktura });
+        company.Addresses.Add(new Address() { AddressLine = "Box 2", PostalCode = "456 78", City = "Staden", AddressType = AddressTypeEnum.Leverans });
+
+
+        Console.WriteLine("Företagskund");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
+        Console.WriteLine(company);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+        Console.ResetColor();
+
     }
 }
